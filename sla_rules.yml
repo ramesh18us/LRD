@@ -11,9 +11,9 @@ rules:                                                        # List of the rule
     arguments:                                                # The arguments which a given type is expecting (at least one entry).
       - transactionName: Search                               # The name of the transaction for which we want to calculate the average.
         threshold:
-          - averageTime: 3000                                 # The average time in milliseconds above which the SLA rule will fail.
+          - averageTime: 30000                                 # The average time in milliseconds above which the SLA rule will fail.
   - rule: Percentage of Failed Transactions                   # The SLA rule measures the percentage of total failed transactions.
     type: failureRate                                         # The transaction type.
     enabled: true                                             # Allows the user to enable or disable a specific rule.
     arguments:                                                # The arguments which a given type is expecting (one entry).
-      percentage: 3                                           # The percentage threshold above which the SLA rule will fail.
+      percentage: 30                                           # The percentage threshold above which the SLA rule will fail.
